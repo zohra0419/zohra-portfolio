@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Private portfolio of Zohra Jayaraman, product designer for ambitious AI teams." />
+    <title>Zohra Jayaraman — Private Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="./refinements.css?v=all-case-toc-20260803" />
+  </head>
+  <body>
+    <main id="app">
+      <section class="gate" id="gate" aria-label="Private portfolio access">
+        <div class="gate-top"><span>ZJ / 2026</span><span>SF · CA</span></div>
+        <div class="gate-grid"></div>
+        <div class="gate-content">
+          <p class="eyebrow">Independent product designer</p>
+          <h1>Making complex<br /><em>feel inevitable.</em></h1>
+          <p class="gate-intro">Zohra Jayaraman partners with the teams shaping how we work, think and create with AI.</p>
+          <form id="password-form" class="password-form">
+            <label for="password">Private access required</label>
+            <div class="password-row"><input id="password" type="password" autocomplete="current-password" placeholder="Enter password" /><button type="submit">Enter <span>↗</span></button></div>
+            <p class="password-help" id="password-help">Request access from Zohra to view selected work.</p>
+          </form>
+        </div>
+        <div class="gate-bottom"><span>Selected work / under NDA</span><span>01—04</span></div>
+      </section>
+
+      <section class="portfolio hidden" id="portfolio">
+        <header class="site-header"><a href="#home" class="logo">ZJ<span>®</span></a><nav><a href="#work">Work</a><a href="./about.html">About</a><button class="contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">Let’s talk <span aria-hidden="true">↗</span></button></nav></header>
+        <section class="home" id="home">
+          <div class="home-copy"><p class="eyebrow">Senior Product Designer / Remote; Bay Area</p><h1>Zohra<br />Jayaraman</h1><p class="home-description">I design efficient solutions by simplifying complexity for users and evolving design systems.</p><a class="resume-button" href="./assets/zohra-jayaraman-resume.pdf" download><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v7m0 0 3-3m-3 3L5 6M3 12.5v1h10v-1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Download résumé</a></div>
+          <div class="portrait-wrap"><div class="portrait"><img src="./assets/zohra-jayaraman-profile.png" alt="Zohra Jayaraman" /></div><div class="portrait-roles" aria-label="Design specialties"><span>Vibe Coder</span><span>Design Systems</span></div></div>
+        </section>
+        <section class="work" id="work"><div class="section-title"><p class="eyebrow">Selected work</p><p>Filter by craft</p></div><div class="filter-bar" id="filter-bar"></div><div class="project-list" id="project-list"></div></section>
+        <section class="testimonials"><div class="section-title"><p class="eyebrow">Kind words</p><p>Selected testimonials</p></div><div class="testimonial-grid"><blockquote>“Zohra is the most organized, detail-oriented, and systems-minded thinker I’ve worked with.”<cite>Olivia Cheng · UX Designer, UST Global</cite></blockquote><blockquote>“Her expertise in design systems transformed our team’s workflow—more structured, consistent, and scalable.”<cite>Sabrina Lin · UX Designer, UST Global</cite></blockquote><blockquote>“Zohra developed our user-testing protocol from scratch and always found new, creative ways to enhance the experience.”<cite>Janice Tam · Co-Founder & CEO, TrueToForm</cite></blockquote></div></section>
+        <footer><span>© 2026 Zohra Jayaraman</span><span>Senior Product Designer</span></footer>
+      </section>
+      <section class="case-study hidden" id="case-study"></section>
+      <section class="contact-modal" id="contact-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-title" aria-hidden="true">
+        <div class="contact-modal-backdrop" data-contact-close></div>
+        <div class="contact-modal-panel">
+          <button class="contact-close" type="button" aria-label="Close contact form" data-contact-close>×</button>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Let’s make something clear and intuitive.</h2>
+          <p class="contact-intro">Share a little about your team or project and I’ll be in touch.</p>
+          <form class="contact-form" id="contact-form">
+            <label>Name<input name="name" required autocomplete="name" /></label>
+            <label>Email<input name="email" type="email" required autocomplete="email" /></label>
+            <label>Message<textarea name="message" rows="4" required></textarea></label>
+            <button type="submit">Send message <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="contact-email">Or email me directly at <a href="mailto:jayzohra@gmail.com">jayzohra@gmail.com</a>.</p>
+        </div>
+      </section>
+    </main>
+<script src="./app.js?v=all-case-toc-20260803"></script>
+  </body>
+</html>
