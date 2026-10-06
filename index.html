@@ -26,7 +26,7 @@
             <p class="password-help" id="password-help">Request access from Zohra to view work.</p>
           </form>
         </div>
-        <div class="gate-bottom"><span>Work</span><span>01—04</span></div>
+        <div class="gate-bottom"><span>Work</span><span id="last-updated" style="text-transform:none">Last Updated: 10/05/2026</span></div>
       </section>
 
       <section class="portfolio hidden" id="portfolio">
@@ -58,5 +58,23 @@
       </section>
     </main>
 <script src="./app.js?v=chat-agent-20261005"></script>
+<script>
+(function(){
+  var el=document.querySelector('#last-updated');
+  if(!el)return;
+  function format(date){
+    var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'2-digit',day:'2-digit',year:'numeric'}).formatToParts(date);
+    var get=function(type){return parts.find(function(part){return part.type===type}).value};
+    return get('month')+'/'+get('day')+'/'+get('year');
+  }
+  fetch('https://api.github.com/repos/zohra0419/zohra-portfolio/commits?per_page=1',{headers:{Accept:'application/vnd.github+json'}})
+    .then(function(response){return response.ok?response.json():Promise.reject()})
+    .then(function(commits){
+      var stamp=commits&&commits[0]&&commits[0].commit&&(commits[0].commit.committer||commits[0].commit.author);
+      if(stamp&&stamp.date)el.textContent='Last Updated: '+format(new Date(stamp.date));
+    })
+    .catch(function(){});
+})();
+</script>
   </body>
 </html>
